@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>Racer</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="icon" type="image/png" href="i.png">
+<style>
+#c {
+	display: none;
+	position: absolute;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	background: #000;
+	color: #fff;
+	font: 23px monospace;
+}
+input {
+	display: none;
+}
+:checked ~ label {
+	color: #000;
+	background: #fff;
+}
+ol li {
+	display: inline-block;
+	height: 100%;
+	float: left;
+}
+li label {
+	display: inline-block;
+	height: 100%;
+	padding: 0 0.75em;
+	line-height: 2.5em;
+}
+ol {
+	height: 2.5em;
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+p {
+	clear: both;
+}
+li,button {
+	display: block;
+}
+div {
+	padding: 0.5em;
+}
+button {
+	width: 100%;
+	font: inherit;
+	background: #fff;
+	color: #000;
+	line-height: 2;
+}
+</style>
+</head><body>
+<section id="i"><form autocomplete="off">
+<div>Style:
+<ol>
+<li><input id="r1" name="s" value="0" type="radio" checked><label for="r1">Forest</label></li>
+<li><input id="r2" name="s" value="1" type="radio"><label for="r2">Desert</label></li>
+<li><input id="r3" name="s" value="2" type="radio"><label for="r3">Snow</label></li>
+</ol></div>
+<div>Car:
+<ol>
+<li><input id="r4" name="c" value="0" type="radio" checked><label for="r4">Red</label></li>
+<li><input id="r5" name="c" value="1" type="radio"><label for="r5">Blue</label></li>
+<li><input id="r6" name="c" value="2" type="radio"><label for="r6">Yellow</label></li>
+<li><input id="r7" name="c" value="3" type="radio"><label for="r7">Green</label></li>
+</ol></div>
+<div>Road:
+<ol>
+<li><input id="r8" name="r" value="0" type="radio" checked><label for="r8">Traditional</label></li>
+<li><input id="r9" name="r" value="1" type="radio"><label for="r9">Oval</label></li>
+<li><input id="r10" name="r" value="2" type="radio"><label for="r10">Short</label></li>
+</ol></div></form>
+<div>Best time: <span id="t"></span></div>
+<button id="g">Go!</button>
+</section>
+<canvas id="c"></canvas>
+<script src="racer.js"></script>
+</body></html>
