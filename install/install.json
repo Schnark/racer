@@ -4,6 +4,7 @@
 		"en": "Racer – App for Firefox OS",
 		"de": "Racer – App für Firefox OS"
 	},
+	"serviceworker": true,
 	"icon": "i.png",
 	"screenshots": [
 		"main.png#landscape",
