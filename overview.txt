@@ -1,0 +1,18 @@
+There are three versions:
+
+1. Unminified code:
+racer.html
+racer.js
+
+2. Firefox OS app:
+i.html (minified racer.html with minified racer.js included)
+
+together with i.png and manifest.webapp zipped into racer.zip
+distributed via github.manifest.webapp or racer.manifest.webapp
+
+The ZIP file (or the data stored on the device, which is a bit larger) count for the 10KB limit.
+
+3. Progressive web app:
+index.html (from i.html, with manifest.json and service worker included)
+manifest.json
+sw.js

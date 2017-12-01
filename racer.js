@@ -609,9 +609,9 @@ function resize () {
           sprite  = playerSegment.s[n];
           spriteW = sprite.source.w * SPRITES.SCALE;
           if (Util_overlap(playerX, playerW, sprite.o + spriteW/2 * (sprite.o > 0 ? 1 : -1), spriteW)) {
+			if (speed > maxSpeed/4) vibrate();
             speed = maxSpeed/5;
             position = Util_increase(playerSegment.p1.w.z, -playerZ, trackLength); // stop in front of sprite (at front of segment)
-			vibrate();
             break;
           }
         }
@@ -1092,7 +1092,10 @@ canvas.style.backgroundColor = COLORS.SKY;
         { k: 40, m: 'u', a: function() { keySlower = false; } }
       ]);
 setMobileListeners();
-
+try {
+	navigator.requestWakeLock('screen');
+} catch (e) {
+}
       var now    = null,
           last   = Util_timestamp(),
           dt     = 0,

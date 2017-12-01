@@ -1,5 +1,5 @@
 NAME = racer
-CONTENTS = index.html i.png manifest.webapp
+CONTENTS = i.html i.png manifest.webapp
 
 .PHONY: all
 all: $(NAME).zip $(NAME).manifest.webapp github.manifest.webapp
@@ -10,7 +10,7 @@ clean:
 
 $(NAME).zip: clean $(CONTENTS)
 	rm -f $(NAME).zip
-	zip -r $(NAME).zip $(CONTENTS)
+	zip -r -9 $(NAME).zip $(CONTENTS)
 
 #the sed script does the following:
 #look for the line with "launch_path"
