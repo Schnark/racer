@@ -5,7 +5,7 @@ racer.html
 racer.js
 
 2. Firefox OS app:
-i.html (minified racer.html with minified racer.js included)
+i.html (minified racer.html with minified racer.js included, without some metadata)
 
 together with i.png and manifest.webapp zipped into racer.zip
 distributed via github.manifest.webapp or racer.manifest.webapp
@@ -13,6 +13,6 @@ distributed via github.manifest.webapp or racer.manifest.webapp
 The ZIP file (or the data stored on the device, which is a bit larger) count for the 10KB limit.
 
 3. Progressive web app:
-index.html (from i.html, with manifest.json and service worker included)
+index.html (from i.html, with manifest.json and service worker included, and with metadata added back)
 manifest.json
 sw.js
